@@ -1,0 +1,13 @@
+{
+  "name": "Facebook Most Recent Posts",
+  "version": "1.2",
+  "description": "Clicking on [f] icon keeps newsfeed set to 'most recent'",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["most_recent.js"]
+    }
+  ],
+  "manifest_version": 2
+}
