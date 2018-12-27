@@ -10,7 +10,7 @@
     }
   ],
   "icons": {
-    "128": "mostrecent.png"
+    "128": "icon.png"
   },
   "manifest_version": 2
 }
