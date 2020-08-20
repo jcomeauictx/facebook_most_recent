@@ -1,4 +1,4 @@
-var mostRecent = "https://facebook.com/?sk=h_chr";
+var mostRecent = "/?sk=h_chr";
 var selector = [
 	'a[href="/"]',
 	'a[href="https://www.facebook.com"]',
