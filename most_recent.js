@@ -5,6 +5,9 @@ var selector = [
 	'a[href="https://www.facebook.com/"]',
 	'a[href="https://www.facebook.com/?ref=logo"]'
 ].join(",");
-var nodes = document.querySelectorAll(selector);
-// for...in construct doesn't work: https://stackoverflow.com/a/53915628/493161
-for (var i = 0; i < nodes.length; i++) nodes[i].href = mostRecent;
+var node = document.querySelector(selector);  // just get first one
+var image = node.querySelector("svg,img");
+var cleanLink = document.createElement("a");
+cleanLink.setAttribute("href", mostRecent);
+cleanLink.appendChild(image);
+node.replaceWith(cleanLink);
