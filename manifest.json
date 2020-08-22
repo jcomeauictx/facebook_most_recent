@@ -1,16 +1,18 @@
 {
   "name": "Facebook Most Recent Posts",
-  "version": "1.3.0.8",
-  "description": "Clicking on [f] icon keeps newsfeed set to 'most recent'",
-  "permissions": ["activeTab"],
-  "content_scripts": [
-    {
-      "matches": ["https://www.facebook.com/*", "https://facebook.com/*"],
-      "js": ["most_recent.js"]
-    }
-  ],
+  "version": "1.4.0.7",
+  "description": "Clicking extension icon refreshes 'most recent' posts",
+  "background": {
+    "persistent": false,
+    "scripts": ["most_recent.js"]
+  },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Facebook most recent posts"
+   },
   "icons": {
     "128": "icon.png"
   },
+  "permissions": ["https://*.facebook.com/*"],
   "manifest_version": 2
 }
